@@ -2,7 +2,7 @@
     /* tp2, d, and baf parsing variables */
 	OUTER_SPRINT ~SrcFolder~ ~BGEE~
 	OUTER_SPRINT ~SrcFolderExact~ ~EET~
-    OUTER_SPRINT "tutuorbgt" "eet"
+    OUTER_SPRINT "tutuorbgt" ""
     OUTER_SPRINT "bgdreams" "DREAM"
     //OUTER_SPRINT "bgdream1" "1"
     //OUTER_SPRINT "bgdream2" "2"
