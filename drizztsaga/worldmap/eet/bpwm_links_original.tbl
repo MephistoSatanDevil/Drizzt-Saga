@@ -1,0 +1,26 @@
+
+//Drizzt Saga Area Links Table - BG-BGT-WM/BG1 version (original)
+SRC_AREA SRC_NWSE TARGET_ARE ENTRY_NAME   TRV_TIME DEF_ENTRY ENC1 ENC2 ENC3 ENC4 ENC5 ENC_PROB
+
+BG1000   E        F_7777     #WMtravel    6        1         N    N    N    N    N    0
+BG1000   E        F_0111     #WMtravel    4        1         N    N    N    N    N    0
+BG1000   E        F_0222     #WMtravel    4        1         N    N    N    N    N    0
+BG1000   E        F_9898     #WMtravel    6        1         N    N    N    N    N    0
+
+F_0111   S        BG1000     Exit1400     4        1         N    N    N    N    N    0
+F_0222   S        BG1000     Exit1400     4        1         N    N    N    N    N    0
+F_7777   S        BG1000     Exit1400     6        1         N    N    N    N    N    0
+F_9898   S        BG1000     Exit1400     6        1         N    N    N    N    N    0
+
+F_0111   S        F_0222     #WMtravel    4        1         N    N    N    N    N    0
+F_0111   S        F_7777     #WMtravel    4        1         N    N    N    N    N    0
+F_0111   S        F_9898     #WMtravel    4        1         N    N    N    N    N    0
+F_0222   S        F_0111     #WMtravel    4        1         N    N    N    N    N    0
+F_0222   S        F_7777     #WMtravel    8        1         N    N    N    N    N    0
+F_0222   S        F_9898     #WMtravel    8        1         N    N    N    N    N    0
+F_7777   S        F_0111     #WMtravel    4        1         N    N    N    N    N    0
+F_7777   S        F_0222     #WMtravel    8        1         N    N    N    N    N    0
+F_7777   S        F_9898     #WMtravel    2        1         N    N    N    N    N    0
+F_9898   S        F_0111     #WMtravel    4        1         N    N    N    N    N    0
+F_9898   S        F_0222     #WMtravel    8        1         N    N    N    N    N    0
+F_9898   S        F_7777     #WMtravel    2        1         N    N    N    N    N    0

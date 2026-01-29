@@ -23,7 +23,12 @@ ALWAYS
  
   // only do this once per Weidu session
   ACTION_IF NOT VARIABLE_IS_SET ~GameTypeDetected~ BEGIN
- 	
+ 	ACTION_IF GAME_IS ~EET~ BEGIN
+		// Enhanced Edition:
+		PRINT @1500
+		INCLUDE ~DRIZZTSAGA\lib\eet_cpmvars.tpa~
+	END
+	ELSE
 	ACTION_IF GAME_IS ~BGEE~ BEGIN
 		// Enhanced Edition:
 		PRINT @1500
@@ -78,7 +83,7 @@ LANGUAGE ~Italian~								~italian~	 ~DRIZZTSAGA/Language/Italian/setup.tra~
 LANGUAGE ~Polish~								~polish~	 ~DRIZZTSAGA/Language/Polish/setup.tra~	 
 LANGUAGE ~Russian~								~russian~	 ~DRIZZTSAGA/Language/Russian/setup.tra~
 LANGUAGE ~Spanish~								~spanish~	 ~DRIZZTSAGA/Language/Spanish/setup.tra~
-LANGUAGE ~Simplified Chinese~								~schinese~	 ~DRIZZTSAGA/Language/schinese/setup.tra~
+LANGUAGE ~Simplified Chinese~					~schinese~	 ~DRIZZTSAGA/Language/schinese/setup.tra~
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 //// Original version: new areas connected by travel triggers /////////////////////////////////
@@ -87,7 +92,7 @@ LANGUAGE ~Simplified Chinese~								~schinese~	 ~DRIZZTSAGA/Language/schinese/s
 BEGIN @1502
 DESIGNATED 0
 SUBCOMPONENT @0
-REQUIRE_PREDICATE GAME_IS ~BGEE BGT Tutu_TotSC~ @356
+REQUIRE_PREDICATE GAME_IS ~BGEE BGT Tutu_TotSC EET~ @356
 
 LAM DS_CORE_COMPONENT
 
@@ -112,7 +117,7 @@ LAF ADD_BP_BGT_WORLDMAP
 BEGIN @489
 DESIGNATED 1
 SUBCOMPONENT @0
-REQUIRE_PREDICATE GAME_IS ~BGEE BGT Tutu_TotSC~ @356
+REQUIRE_PREDICATE GAME_IS ~BGEE BGT Tutu_TotSC EET~ @356
 
 LAM DS_CORE_COMPONENT
 
