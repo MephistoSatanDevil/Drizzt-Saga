@@ -181,7 +181,7 @@ COPY ~DRIZZTSAGA\ARE-DATA\BPWM~ ~override~
 BEGIN @1507  // Raise the XP cap
 DESIGNATED 2
 DEPRECATED @1515
-REQUIRE_PREDICATE NOT GAME_IS ~BGT~ @1506
+REQUIRE_PREDICATE NOT GAME_IS ~BGT EET~ @1506
 WARN @1515
 
 ///////////////////////////////////////////////////////////////////////////////////////////////

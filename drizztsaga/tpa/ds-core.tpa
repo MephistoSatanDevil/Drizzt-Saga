@@ -69,7 +69,7 @@ ACTION_IF GAME_IS ~BGT~ AND NOT MOD_IS_INSTALLED "setup-bgtmusic.tp2" "0" BEGIN
 		  	//END
 		  END
 END ELSE
-ACTION_IF GAME_IS ~BGEE~ BEGIN
+ACTION_IF GAME_IS ~BGEE EET~ BEGIN
 	OUTER_SET SONGID_BGTHEME = 82
 END
 	
@@ -2075,7 +2075,7 @@ COPY ~DRIZZTSAGA/ITM/F_UNDRNG.ITM~          ~override~
 COPY ~DRIZZTSAGA/ITM/F_VAMP1.ITM~            ~override~         
   SAY NAME1 @324
   SAY NAME2 @324
-  PATCH_IF GAME_IS ~BGEE~ BEGIN		// "Ability Score Drained" strref
+  PATCH_IF GAME_IS ~BGEE EET~ BEGIN		// "Ability Score Drained" strref
 	  WRITE_LONG 0x13e 25081
   END ELSE BEGIN
 	  WRITE_LONG 0x13e 8320
@@ -2166,7 +2166,7 @@ COPY_EXISTING ~SW1H16.ITM~ ~override\F_DRIWP2.ITM~	// Off-hand weapon both in- a
 		WRITE_LONG 0x60 3
 	END
 
-ACTION_IF GAME_IS ~BGEE~ BEGIN
+ACTION_IF GAME_IS ~BGEE EET~ BEGIN
 	COPY_EXISTING ~F_DRIWP2.ITM~ ~override\F_DRIWP4.ITM~ // Droppable version of the off-hand weapon for BGEE. Undroppable version is needed 'cause otherwise players who killed Drizzt could loot two twinkles from Drizzt's corpse, vanilla and WP2
 		WRITE_BYTE 0x18 THIS BOR 0b00000100			  // make droppable
 END	
@@ -2225,7 +2225,7 @@ LAF HANDLE_TILESETS END
 PRINT @370
 
 // BG1 skeleton warrior summons for BGT/Tutu
-ACTION_IF NOT GAME_IS ~BGEE~ BEGIN
+ACTION_IF NOT GAME_IS ~BGEE EET~ BEGIN
 	COPY ~DRIZZTSAGA/Misc/%SrcFolderExact%~ ~override~
 END
 
@@ -2233,7 +2233,7 @@ END
 COPY ~DRIZZTSAGA/misc/F_DIE.EFF~ 	~override~	 
 	 ~DRIZZTSAGA/misc/F_MACDIS.EFF~ ~override~	 
 COPY ~DRIZZTSAGA/misc/F_MESDIE.EFF~ ~override~
-	PATCH_IF GAME_IS ~BGEE~ BEGIN	// BGEE
+	PATCH_IF GAME_IS ~BGEE EET~ BEGIN	// BGEE
 		SET undead_destr_strref = 31250
 	END ELSE BEGIN					// BGT/Tutu
 		SET undead_destr_strref = 10554
